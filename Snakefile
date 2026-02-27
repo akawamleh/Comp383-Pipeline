@@ -94,7 +94,7 @@ rule fetch_betaherpes_fna:
         rm -f blast_db/beta.zip
 
         datasets download virus genome taxon betaherpesvirinae --refseq --include genome --filename blast_db/beta.zip
-        unzip datasets download virus genome taxon betaherpesvirinae --refseq --include genome --filename blast_db/beta.zip
+        unzip -o blast_db/beta.zip -d blast_db/beta_dataset >/dev/null
 
         #datasets output fasta path
         src="blast_db/beta_dataset/ncbi_dataset/data/genomic.fna"
