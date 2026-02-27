@@ -101,7 +101,7 @@ data/raw/SRR5660044_2.fastq.gz
 data/raw/SRR5660045_1.fastq.gz  
 data/raw/SRR5660045_2.fastq.gz  
 
-## Test Data (for fast grading)
+## Test Data
 
 Create smaller FASTQ files:
 
