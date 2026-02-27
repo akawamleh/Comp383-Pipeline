@@ -4,7 +4,6 @@ data/sra/
 
 #ignore outputs
 results/
-PipelineReport.txt
 .snakemake/
 ref/
 blast_db/

@@ -1,4 +1,4 @@
-mode: test 
+mode: full 
 
 samples:
   - SRR5660030

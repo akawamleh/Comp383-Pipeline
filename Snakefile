@@ -51,8 +51,8 @@ rule fetch_hcmv_ref:
         rm -rf ref/hcmv_dataset
         rm -f ref/hcmv.zip
 
-        datasets download genome accession {params.acc} --include genome -o ref/hcmv.zip
-        unzip -o ref/hcmv.zip -d ref/hcmv_dataset >/dev/null
+        datasets download genome accession GCF_000845245.1 --include genome --filename ref/hcmv.zip
+        unzip datasets download genome accession GCF_000845245.1 --include genome --filename ref/hcmv.zip
 
         fna=$(find ref/hcmv_dataset -name "*genomic.fna" | head -n 1)
         if [ -z "$fna" ]; then
@@ -93,8 +93,8 @@ rule fetch_betaherpes_fna:
         rm -rf blast_db/beta_dataset
         rm -f blast_db/beta.zip
 
-        datasets download virus genome taxon {params.taxon} --refseq --include genome -o blast_db/beta.zip
-        unzip -o blast_db/beta.zip -d blast_db/beta_dataset >/dev/null
+        datasets download virus genome taxon betaherpesvirinae --refseq --include genome --filename blast_db/beta.zip
+        unzip datasets download virus genome taxon betaherpesvirinae --refseq --include genome --filename blast_db/beta.zip
 
         #datasets output fasta path
         src="blast_db/beta_dataset/ncbi_dataset/data/genomic.fna"
