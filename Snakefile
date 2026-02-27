@@ -52,7 +52,7 @@ rule fetch_hcmv_ref:
         rm -f ref/hcmv.zip
 
         datasets download genome accession GCF_000845245.1 --include genome --filename ref/hcmv.zip
-        unzip datasets download genome accession GCF_000845245.1 --include genome --filename ref/hcmv.zip
+        unzip -o ref/hcmv.zip -d ref/hcmv_dataset >/dev/null
 
         fna=$(find ref/hcmv_dataset -name "*genomic.fna" | head -n 1)
         if [ -z "$fna" ]; then
