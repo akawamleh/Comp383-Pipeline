@@ -1,21 +1,26 @@
-#large data
-data/
+#ignore full data and temp downloads
+data/raw/
+data/sra/
+
+#ignore outputs
 results/
-blast_db/
-ref/
-
-#snakemake temp
-.snakemake/
-
-#output files
 PipelineReport.txt
+.snakemake/
+ref/
+blast_db/
 
-#sra temp
-*.sra
-data/tmp/
+#ignore large file types
+*.bam
+*.sam
+*.fastq
+*.fastq.gz
+
+#allow test data (override the patterns above)
+!data/test/
+!data/test/*.fastq.gz
 
 #python cache
 __pycache__/
 
-#mac files
+#mac
 .DS_Store
