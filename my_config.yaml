@@ -1,0 +1,24 @@
+mode: test 
+
+samples:
+  - SRR5660030
+  - SRR5660033
+  - SRR5660044
+  - SRR5660045
+
+threads: 4
+spades_k: 99
+
+paths:
+  test_dir: data/test
+  full_dir: data/raw
+
+reference:
+  hcmv_accession: GCF_000845245.1
+  hcmv_fna: ref/hcmv.fna
+  bowtie2_index_prefix: ref/hcmv_index
+
+blast:
+  taxon: betaherpesvirinae
+  fasta: blast_db/betaherpesvirinae.fna
+  db_prefix: blast_db/betaherpesvirinae

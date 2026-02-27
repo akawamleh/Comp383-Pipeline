@@ -1,0 +1,21 @@
+#large data
+data/
+results/
+blast_db/
+ref/
+
+#snakemake temp
+.snakemake/
+
+#output files
+PipelineReport.txt
+
+#sra temp
+*.sra
+data/tmp/
+
+#python cache
+__pycache__/
+
+#mac files
+.DS_Store
